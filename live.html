@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'poppins',
+            sans-serif;
+        }
+        .container{
+            width: 400px;
+            padding: 40px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 0px 15px gray;
+            border-radius: 5px;
+
+        }
+        .container h2{
+            font-size: 2rem;
+            margin: -40px -40px 50px -40px;
+            border-radius: 5px 5px 0px 0px;
+            text-align: center;
+            background-color: yellowgreen;
+            color: white;
+        }
+        .container textarea{
+            position: relative;
+            margin-bottom: 20px;
+            resize: none;
+            height: 200px;
+            width: 100% !important;
+            border:none;
+            padding: 10px;
+            border-radius: 5px;
+            outline: none;
+            font-size: 1rem;
+            font-family: 'poppins',
+            sans-serif;
+            box-shadow: 0px 0px 10px gray;
+            letter-spacing: 0.1rem;
+        }
+        .container p{
+            display: flex;
+            align-items: center;
+            font-size: 1.25rem;
+            color: #333;
+        }
+        .container p .counter{
+            font-size: 2rem;
+            color: yellowgreen;
+            box-shadow: 0px 0px 5px gray;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Live Character Counter</h2>
+        <textarea name="textarea"
+        id="textarea"
+        cols="30"
+        rows="10"
+        placeholder="Type your text"
+        onkeyup="countingCharacter();"></textarea>
+        <p>Total Characters You Typed: <span class="counter">0</span> </p>
+    </div>
+    <script>
+        const textarea = document.
+        querySelector('textarea');
+        const counter = document.
+        querySelector('.counter')
+        function countingCharacter(){
+            const text = textarea.
+            value;
+            const textlength =
+            textarea.value.length;
+            counter.innerText = `${textlength}`
+            
+        }
+             
+
+    </script>
+    
+</body>
+</html>
